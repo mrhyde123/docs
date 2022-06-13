@@ -579,14 +579,14 @@ SPI IO support #define `USE_SCRIPT_SPI`
   
 `ttget(TNUM SEL)` get tasmota timer setting from timer TNUM (1 .. 16)  
 SEL:  
-  0 = time  
-  1 = time window  
-  2 = repeat  
-  3 = days  
-  4 = device  
-  5 = power  
-  6 = mode  
-  7 = arm  
+  0 = time (in minutes beginning from 00:00 e.g. 2AM=120) 
+  1 = time window (Tolerance+/-)  
+  2 = repeat (Repeat flag) 
+  3 = days (Value total: Su:1, Mo:2, Tu:4, Wed:8; Th:16, Fr:32, Sa:64)
+  4 = device (Tasmota device starting with Index 0)
+  5 = power (Power State ON (1) or OFF (0) )
+  6 = mode (Timebased:0, Sunrise:1, Sunset:2)
+  7 = arm (Arm Flag) 
 `mqtts` = MQTT connection status: `0` = disconnected, `>0` = connected  
 `wbut` = button status of watch side button (if defined USE_TTGO_WATCH)  
 `wdclk` = double tapped on display (if defined USE_TTGO_WATCH)  
